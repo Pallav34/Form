@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Data Collection Form</h1>
+    <form id="dataForm">
+        <label for="location">Location:</label>
+        <input type="text" id="location" required>
+
+        <label for="roomType">Room type: </label>
+        <select id="roomType" required>
+            <option value="individual">Individual</option>
+            <option value="shared">Shared</option>
+        </select>
+
+        <div id="sharedFields">
+            <label for="totalCapacity">Total capacity: </label>
+            <input type="number" id="totalCapacity">
+
+            <label for="currentRoomAvailable">Current room available: </label>
+            <input type="number" id="currentRoomAvailable">
+        </div>
+
+        <label for="totalRooms">Total rooms: </label>
+        <input type="number" id="totalRooms" required>
+
+        <label for="livingType">Living type: </label>
+        <select id="livingType" required>
+            <option value="individual">Individual</option>
+            <option value="shared">Shared</option>
+        </select>
+
+        <label for="tables">Tables: </label>
+        <select id="tables">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <label for="chairs">Chairs: </label>
+        <select id="chairs">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <label for="beds">Beds: </label>
+        <select id="beds">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <label for="electricityUnit">Electricity unit: </label>
+        <input type="number" id="electricityUnit" value="10">
+
+        <label for="wifi">Wifi: </label>
+        <input type="checkbox" id="wifi">
+
+        <div id="wifiCharges">
+            <label for="monthlyCharges">Monthly charges: </label>
+            <select id="monthlyCharges">
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <label for="waterCharges">Water Charges (extra): </label>
+        <input type="text" id="waterCharges">
+
+        <label for="roomTerms">Terms and conditions of room:</label>
+        <textarea id="roomTerms" rows="4"></textarea>
+
+        <label for="roomPhotos">Room photos:</label>
+        <label class="custom-file-upload">
+            <input type="file" id="roomPhotos" accept="image/*">
+            Upload Image
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
